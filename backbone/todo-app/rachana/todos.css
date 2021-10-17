@@ -1,0 +1,220 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font: 14px;
+	line-height: 1.4em;
+	background: white;
+	color: #333333;
+	width: 520px;
+	height: 100vh;
+	margin: 0 auto;
+}
+
+#current-time {
+	color: white
+}
+
+
+#todoapp {
+	width: 900px;
+	height: fit-content;
+	background:lightcoral;
+	padding: 20px;
+	margin-bottom: 40px;
+	border-radius: 4px;
+}
+
+#header__section{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#todoapp h1 {
+	font-size: 72px;
+	color: white;
+	font-weight: lighter;
+	text-align: center;
+	padding: 0 0 10px 0;
+}
+
+#todoapp input[type="text"] {
+	background-color: white;
+	width: 500px;
+	font-size: 24px;
+	line-height: 1.4em;
+	border: 0;
+	border-radius: 15px;
+	outline: none;
+	padding: 6px;
+	border: 1px solid #999999;
+	
+}
+
+#toggle-all{
+	color: white;
+}
+
+#todoapp input::-webkit-input-placeholder {
+	color: grey;
+}
+
+#main {
+	margin-top: 10px;
+	color: white;
+	font-size:18px;
+	display: none;
+}
+
+#todo-list {
+	margin: 10px 0;
+	padding: 0;
+	list-style: none;
+}
+
+#todo-list li {
+	padding: 18px 20px 18px 0;
+	position: relative;
+	font-size: 24px;
+	border-bottom: 1px solid #cccccc;
+}
+
+#todo-list li.done label {
+	color: #777777;
+	text-decoration: line-through;
+}
+
+#todo-list .destroy {
+	position: absolute;
+	right: 5px;
+	top: 20px;
+	display: none;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+}
+
+#todo-list li:hover .destroy {
+  	display: block;
+}
+
+#todo-list .destroy:hover {
+  	background-position: 0 -20px;
+}
+
+#todo-list li.editing {
+	border-bottom: none;
+	margin-top: -1px;
+	padding: -10px;
+}
+
+#todo-list li.editing:last-child {
+	margin-bottom: -1px;
+	padding: -10px;
+}
+
+#todo-list li.editing .edit {
+	display: block;
+	width: 444px;
+	margin: 0;
+}
+
+#todo-list li.editing .view {
+	display: none;
+}
+
+#todo-list li .view label {
+	word-break: break-word;
+}
+
+#todo-list li .edit {
+	display: none;
+}
+
+#clear-completed {
+	float: right;
+	line-height: 20px;
+	text-decoration: none;
+	background: rgba(0, 0, 0, 0.1);
+	color: white;
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	padding: 0 10px 1px;
+	cursor: pointer;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 0 0;
+}
+
+#clear-completed:hover {
+	
+	box-shadow: rgba(0, 0, 0, 0.3) 0 1px 0 0;
+}
+
+#clear-completed:active {
+	position: relative;
+	top: 1px;
+}
+
+.todo-count {
+	color:white;
+	font-size:18px;
+	font-weight: bold;
+}
+
+#weather__details{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 20px 200px;
+	
+}
+#weather{
+	color: gray;
+	display: flex;
+	margin-top: 10px;
+	
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#temp-value, #humidity-value, #pressure-value, #windSpeedValue{
+	font-weight: 900;
+	font-size:30px;
+	margin-top: 8px;
+}
+
+.weather__info__container{
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	height:100px;
+	width: 200px;
+	border-radius: 4px;
+	background-color: white;
+}
+
+#weather h2{
+	font-size: 28px;
+	color: white;
+}
+
+#no-todo{
+	color: white;
+	margin-top:20px;
+	border: 1px solid white;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+
