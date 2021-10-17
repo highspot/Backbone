@@ -38,17 +38,10 @@
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
-      <label class="task-title"><%- title %></label>
-
-
-      <div id="date"><b>Target date:</b> <%- displayDate %></div>
-
+      <label><%- title %></label>
       <a class="destroy"></a>
     </div>
     <input class="edit" type="text" value="<%- title %>" />
-    <div id="date-container">
-      <input type="text" name="date" class="edit-date" placeholder="DD/MM/YYYY" value="<%- displayDate%>" />
-    </div>
   </script>
 
   <script type="text/template" id="stats-template">
@@ -56,40 +49,6 @@
       <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
     <% } %>
     <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
-  </script>
-
-  <script type="text/template" id="clock-template">
-    <div class='clock-container'>
-      <div class='clock-text'><%- time %></div>
-    </div>
-  </script>
-
-  <script type="text/template" id="weather-template">
-    <div class='weather__container'>
-      <h2 id="weather-title">Seattle, WA Weather</h2>
-      <div class='temp__container'><div id="temp"><%- currentTemp %>°</h4></div>
-
-      <table class="table">
-        <tbody>
-          <tr>
-            <th scope="row">High/Low</th>
-            <td><%- minTemp %>°/<%- maxTemp %>°</td> 
-          </tr>
-          <tr>
-            <th scope="row">Humidity</th>
-            <td><%- humidity %>%</td> 
-          </tr>
-          <tr>
-            <th scope="row">Pressure</th>
-            <td><%- pressure %> hPa</td> 
-          </tr>
-          <tr>
-            <th scope="row">Wind</th>
-            <td><%- wind %> mph</td> 
-          </tr>
-        </tbody>
-      </table>
-  </div>
   </script>
 
   <script
@@ -114,14 +73,10 @@
 ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-<script src="models/clock.js"></script>
-<script src="models/weather.js"></script>
 <script src="models/todo.js"></script>
 <script src="collections/todos.js"></script>
 <script src="views/todo-view.js"></script>
 <script src="views/app-view.js"></script>
-<script src="views/clock-view.js"></script>
-<script src="views/weather-view.js"></script>
 <script src="app.js"></script>
   </body>
 </html>

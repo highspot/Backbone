@@ -17,9 +17,6 @@ var app = app || {};
           "click a.destroy" : "clear",
           "keypress .edit"  : "updateOnEnter",
           "blur .edit"      : "close",
-          "dblclick #date"  : "editDate",
-          "keypress .edit-date"  : "updateDateOnEnter",
-          "blur .edit-date"      : "closeDate",
         },
     
         // The TodoView listens for changes to its model, re-rendering. Since there's
@@ -32,10 +29,7 @@ var app = app || {};
     
         // Re-render the titles of the todo item.
         render: function() {
-          const todoProps = this.model.toJSON()
-          if(typeof todoProps.targetDate == 'string') todoProps.targetDate = moment(todoProps.targetDate)
-          todoProps["displayDate"] = todoProps.targetDate.format("MM/DD/YYYY")
-          this.$el.html(this.template(todoProps));
+          this.$el.html(this.template(this.model.toJSON()));
           this.$el.toggleClass('done', this.model.get('done'));
           this.input = this.$('.edit');
           return this;
@@ -52,18 +46,6 @@ var app = app || {};
           this.input.focus();
         },
         
-        editDate: function() {
-            this.$("#date-container").addClass("editing");
-            this.$(".edit-date").focus();
-            this.$("#date").addClass("hidden");
-        },
-
-        closeDate: function() {
-            const value = this.$(".edit-date").val();
-            this.model.save({targetDate: value});
-            this.$("#date-container").removeClass("editing");
-            this.$("#date").removeClass("hidden");
-        },
 
         // Close the `"editing"` mode, saving changes to the todo.
         close: function() {
@@ -81,9 +63,6 @@ var app = app || {};
           if (e.keyCode == 13) this.close();
         },
         
-        updateDateOnEnter: function(e) {
-            if (e.keyCode == 13) this.closeDate();
-        },
 
         // Remove the item, destroy the model.
         clear: function() {
