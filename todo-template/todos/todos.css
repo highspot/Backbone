@@ -14,27 +14,11 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
-.weather__container{
-	border-top: 2px solid #ccc;
-	margin-top: 40px;
-}
-#weather-title{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	text-align: center;
-}
+
 #temp{
 	font-size: 25px;
 }
-.clock-text{
-	font-size: 21px;
-	text-align: center;
-	margin-bottom: 10px;
-	
-}
-.clock-container{
-	border-bottom: 2px solid #ccc;
-}
+
 
 #todoapp {
 	background: #fff;
@@ -154,24 +138,6 @@ body {
 	display: none;
 }
 
-
-#todo-list li .edit-date{
-	display: none;
-}
-
-.hidden{
-	display: none;
-}
-
-#date{
-	margin-left: 20px;
-}
-#date-container.editing .edit-date{
-	display: block;
-	width: 444px;
-	padding: 13px 15px 14px 20px;
-	margin: 0;
-}
 
 #todoapp footer {
 	display: none;

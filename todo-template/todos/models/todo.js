@@ -10,7 +10,6 @@ var app = app || {};
             title: "empty todo...",
             order: app.Todos.nextOrder(),
             done: false,
-            targetDate: moment(),
             };
         },
     

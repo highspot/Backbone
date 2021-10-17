@@ -34,22 +34,6 @@ var app = app || {};
           this.main = $('#main');
     
           app.Todos.fetch();
-  
-          const weather = new app.WeatherModel()
-          weather.fetch({success: function(){
-            const weatherView = new app.WeatherView({model: weather}) 
-            weatherView.render()
-          }})
-  
-          const clock = new app.ClockModel()
-
-          setInterval(function () {
-            clock.set({ time: new Date().toLocaleTimeString() });
-          }, 1000);
-          const clockView = new app.ClockView({model: clock})
-          clockView.render()
-  
-          
         },
     
         // Re-rendering the App just means refreshing the statistics -- the rest
