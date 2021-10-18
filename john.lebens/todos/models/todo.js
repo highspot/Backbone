@@ -17,6 +17,17 @@ var app = app || {};
         toggle: function() {
             this.save({done: !this.get("done")});
         }
-    
     });
+    
+    /*
+    app.Weather = Backbone.Model.extend({
+
+        idAttribute: '_id',
+        defaults: function() {
+            return{
+                name: '',
+            }
+        }
+    });
+    */
 })()

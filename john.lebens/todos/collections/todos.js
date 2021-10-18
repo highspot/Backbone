@@ -33,7 +33,13 @@ var app = app || {};
     
       });
     
-      // Create our global collection of **Todos**.
-      app.Todos = new app.TodoList;
+    // Create our global collection of **Todos**.
+    app.Todos = new app.TodoList;
+
+    app.Weather = Backbone.Collection.extend({
+      url: 'api.openweathermap.org/data/2.5/weather?q=Seattle&APPID=ed7dbc717134426c66de2da0a5ab521c',
+      comparator: 'name',
+
+    });
 
 })()
